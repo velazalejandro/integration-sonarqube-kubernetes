@@ -1,0 +1,1 @@
+# integration-sonarqube-kubernetes
