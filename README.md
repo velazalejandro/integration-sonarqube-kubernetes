@@ -5,7 +5,9 @@ Para crear una contaminación, debe seleccionar un nodo que desee reservar para 
 <img width="359" height="44" alt="image" src="https://github.com/user-attachments/assets/31528619-1283-49a9-bfb5-110a35a13bad" />
 
 Seleccione un nodo de la salida de este comando y cree una contaminación personalizada con el siguiente comando.
-<img width="577" height="32" alt="image" src="https://github.com/user-attachments/assets/410160a5-67b6-4bbc-a974-8bcb89a49b65" />. Esta contaminación garantiza que no se programen pods adicionales en este nodo.
+<img width="577" height="32" alt="image" src="https://github.com/user-attachments/assets/410160a5-67b6-4bbc-a974-8bcb89a49b65" />
+
+Esta contaminación garantiza que no se programen pods adicionales en este nodo.
 
 Ignorando esta mancha para SonarQube:
 Para permitir que la implementación de SonarQube ignore la contaminación creada anteriormente, agregue la siguiente sección al archivo values.yaml.
