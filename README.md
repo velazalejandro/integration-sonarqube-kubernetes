@@ -46,20 +46,24 @@ Si deja la persistencia deshabilitada, se prolongará el tiempo de inicio hasta 
 Certificado personalizado:
 Cuando trabaja con su propia CA o en un entorno que usa certificados autofirmados para su plataforma de repositorio de código, puede crear un secreto que contenga este certificado y agregar este certificado al almacén de confianza de Java dentro de la implementación de SonarQube directamente durante la implementación.
 Para habilitar este comportamiento, agregue lo siguiente a su archivo value.yaml.
+
 <img width="193" height="216" alt="image" src="https://github.com/user-attachments/assets/5d08ad99-e80b-41db-ae26-99b5e06aacf2" />
 
 
 Modifica el servicio de SonarQube para escribir balanceador de carga en el archivo values.yaml.
+
 <img width="263" height="309" alt="image" src="https://github.com/user-attachments/assets/38d4c0b1-2372-419e-a5b2-74d444c94fcc" />
 
 <img width="600" height="279" alt="image" src="https://github.com/user-attachments/assets/c2680e50-2256-4c7f-870e-b355cb7f0463" />
 
 
 Creamos el archivo sonar-data.yaml.
+
 <img width="256" height="280" alt="image" src="https://github.com/user-attachments/assets/917fd26c-9ebf-46d5-8061-9e1204468cc1" />
 
 
 Creamos el archivo sonar-extensions.yaml.
+
 <img width="339" height="274" alt="image" src="https://github.com/user-attachments/assets/251e0072-76fc-415c-b421-d6ae1a08fb37" />
 
 <img width="440" height="269" alt="image" src="https://github.com/user-attachments/assets/1684133b-854f-449b-9587-3c7890a83f03" />
@@ -67,10 +71,12 @@ Creamos el archivo sonar-extensions.yaml.
 
 kubectl apply –f sonar-data.yaml
 kubectl apply –f sonar-extensions.yaml
+
 <img width="464" height="63" alt="image" src="https://github.com/user-attachments/assets/4987121e-4a6d-4f97-894b-0b9dbce58d95" />
 
 
 Crear una implementación de SonarQube mediante el archivo sonar-deployment.yaml.
+
 <img width="644" height="820" alt="image" src="https://github.com/user-attachments/assets/aade5f83-875e-422e-8b19-ccfa42a3c719" />
 
 <img width="274" height="92" alt="image" src="https://github.com/user-attachments/assets/220c3a0b-178f-49d3-a05b-08b806b991c6" />
@@ -79,17 +85,20 @@ Crear una implementación de SonarQube mediante el archivo sonar-deployment.yaml
 
 
 Copiamos el archivo sonar-deployment.yaml a la ruta C:\Users\6002336\.kube
+
 <img width="843" height="60" alt="image" src="https://github.com/user-attachments/assets/577ba8c4-dc97-4f1a-8f55-dacb151fe5a8" />
 
 
 Publique SonarQube a través del servicio Kubernetes:
 Creamos el archivo sonar-svc.yaml.
+
 <img width="277" height="344" alt="image" src="https://github.com/user-attachments/assets/f00ae182-3a7a-4686-afb4-372d14ac7dc9" />
 
 <img width="461" height="403" alt="image" src="https://github.com/user-attachments/assets/e6ccd39b-2c6b-4da0-8507-9d1ce23ee4e4" />
 
 
 kubectl apply –f sonar-svc.yaml
+
 <img width="439" height="33" alt="image" src="https://github.com/user-attachments/assets/4932deda-4e0b-4c22-bb4f-92a1b919c627" />
 
 
