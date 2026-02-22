@@ -1,5 +1,17 @@
 # integration-sonarqube-kubernetes
+# Título
+_Integración de SonarQube en Kubernetes
 
+## Comenzando 🚀
+_Estas instrucciones te permiten obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
+
+### Pre-requisitos 📋
+_Que cosas necesitas para instalar el software y como instalarlas_
+- Manejar la consola de PowerShell para la ejecución de comandos.
+- Manejar el editor Notepad o Bloc de Notas para la creación de los archivos de despliegue.
+- 
+
+### Instalación 🔧 Pruebas ⚙️ y Despliegues 📦
 INTEGRACIÓN DE SONARQUBE EN KUBERNETES:
 Para crear una contaminación, debe seleccionar un nodo que desee reservar para SonarQube. Utilice el siguiente comando para obtener una lista de todos los nodos adjuntos a su clúster de Kubernetes.
 <img width="359" height="44" alt="image" src="https://github.com/user-attachments/assets/31528619-1283-49a9-bfb5-110a35a13bad" />
