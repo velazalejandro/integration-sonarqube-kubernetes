@@ -1,0 +1,17 @@
+tolerations:
+ - key: "sonarqube"
+   operator: "Equal"
+   value: "true"
+   effect: "NoSchedule"
+nodeSelector:
+  sonarqube: "true"
+persistence:
+  enabled: true
+caCerts:
+  secret: admin2022
+service:
+  type: LoadBalancer
+  externalPort: 9000
+  internalPort: 9000
+  labels:
+  annotations: {}
