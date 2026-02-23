@@ -120,3 +120,5 @@ kubectl get svc
 
 
 
+## Licencia 📄
+Bajo licencia GNU General Public License v3.0
