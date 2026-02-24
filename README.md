@@ -51,7 +51,7 @@ Persistencia:
 SonarQube viene con un paquete de ElasticSearch, y dado que ElasticSearch tiene estado, también lo es SonarQube. Hay una opción para conservar los índices de ElasticSearch en un volumen
 persistente, pero con las operaciones regulares de eliminación por parte del clúster de Kubernetes, estos índices pueden corromperse.
 Habilitar la persistencia reduce el tiempo de inicio de SonarQube Pod, pero corre el riesgo de corromper su índice de ElasticSearch. Puede habilitar la persistencia agregando lo siguiente a values.yaml.
-<img width="207" height="233" alt="image" src="https://github.com/user-attachments/assets/d2191fa9-b1e1-4523-92cb-5dd92b5ee346" 
+<img width="207" height="233" alt="image" src="https://github.com/user-attachments/assets/d2191fa9-b1e1-4523-92cb-5dd92b5ee346" />
   
 Si deja la persistencia deshabilitada, se prolongará el tiempo de inicio hasta que SonarQube esté disponible, pero no perderá ningún dato, ya que SonarQube conservará todos los datos en la base de datos.
 
