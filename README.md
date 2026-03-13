@@ -5,10 +5,9 @@ Integración de SonarQube en Kubernetes
 ## Comenzando 🚀
 _Estas instrucciones te permiten obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### Pre-requisitos 📋
-_Que cosas necesitas para instalar el software y como instalarlas_
-- Manejar la consola de PowerShell para la ejecución de comandos.
-- Manejar el editor Notepad o Bloc de Notas para la creación de los archivos de despliegue.
+### 🛠️ Tecnologías utilizadas
+- Consola de PowerShell para la ejecución de comandos
+- Editor Notepad o Bloc de Notas para la creación de los archivos de despliegue.
 
 
 ### Instalación 🔧 Pruebas ⚙️ y Despliegues 📦
