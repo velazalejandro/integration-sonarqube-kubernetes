@@ -11,17 +11,19 @@ _Estas instrucciones te permiten obtener una copia del proyecto en funcionamient
 
 
 ### Instalación 🔧 Pruebas ⚙️ y Despliegues 📦
-INTEGRACIÓN DE SONARQUBE EN KUBERNETES:
 Para crear una contaminación, debe seleccionar un nodo que desee reservar para SonarQube. Utilice el siguiente comando para obtener una lista de todos los nodos adjuntos a su clúster de Kubernetes.
+
 <img width="359" height="44" alt="image" src="https://github.com/user-attachments/assets/31528619-1283-49a9-bfb5-110a35a13bad" />
 
 Seleccione un nodo de la salida de este comando y cree una contaminación personalizada con el siguiente comando.
+
 <img width="577" height="32" alt="image" src="https://github.com/user-attachments/assets/410160a5-67b6-4bbc-a974-8bcb89a49b65" />
 
 Esta contaminación garantiza que no se programen pods adicionales en este nodo.
 
 Ignorando esta mancha para SonarQube:
 Para permitir que la implementación de SonarQube ignore la contaminación creada anteriormente, agregue la siguiente sección al archivo values.yaml.
+
 <img width="215" height="155" alt="image" src="https://github.com/user-attachments/assets/06e18c7d-1994-429d-960f-c63367eb58b5" />
 
 Dependiendo del nombre de su contaminación, es posible que deba ajustar la clave en consecuencia.
@@ -31,16 +33,19 @@ Como se describe en la sección anterior de incidencias y tolerancias, para mayo
 Etiquetar un nodo:
 Etiquete el nodo para el que definió previamente una contaminación con el siguiente comando:
 Kubectl label node minikube sonarqube=true
+
 <img width="497" height="31" alt="image" src="https://github.com/user-attachments/assets/c7b40c76-b496-4a94-861a-d1c3eeb0a74c" />
 
 Vincular implementación a etiqueta:
 Para permitir que SonarQube se programe en nodos con esta etiqueta específica, agregue la siguiente sección al archivo values.yaml.
+
 <img width="195" height="209" alt="image" src="https://github.com/user-attachments/assets/e3ba053c-2e63-4220-912a-bb84b6a017ea" />
 
 
 Al combinar la selección de nodos con contaminaciones y tolerancias, SonarQube puede ejecutarse solo en un nodo específico independientemente del resto de su software en su clúster de Kubernetes. Esto da como resultado una mejor estabilidad y rendimiento de SonarQube.
 Creamos un namespace:
 Kubectl create namespace sonarqube
+
 <img width="450" height="37" alt="image" src="https://github.com/user-attachments/assets/10405e0d-3451-4c89-87e0-47b619667ea0" />
 
 <img width="976" height="431" alt="image" src="https://github.com/user-attachments/assets/122e125c-93f8-47f5-b02b-bf625e2331f0" />
@@ -50,6 +55,7 @@ Persistencia:
 SonarQube viene con un paquete de ElasticSearch, y dado que ElasticSearch tiene estado, también lo es SonarQube. Hay una opción para conservar los índices de ElasticSearch en un volumen
 persistente, pero con las operaciones regulares de eliminación por parte del clúster de Kubernetes, estos índices pueden corromperse.
 Habilitar la persistencia reduce el tiempo de inicio de SonarQube Pod, pero corre el riesgo de corromper su índice de ElasticSearch. Puede habilitar la persistencia agregando lo siguiente a values.yaml.
+
 <img width="207" height="233" alt="image" src="https://github.com/user-attachments/assets/d2191fa9-b1e1-4523-92cb-5dd92b5ee346" />
   
 Si deja la persistencia deshabilitada, se prolongará el tiempo de inicio hasta que SonarQube esté disponible, pero no perderá ningún dato, ya que SonarQube conservará todos los datos en la base de datos.
@@ -124,5 +130,6 @@ Bajo licencia GNU General Public License v3.0
 
 ## Autor
 Alejandro Velaz
+
 🎓 Formación: ASIR
 
